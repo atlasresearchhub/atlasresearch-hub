@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atlas Research Hub</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header { background:#06402B; color:white; padding:20px; text-align:center; }
+    header img { height:80px; margin-bottom:10px; }
+    nav { background:#333; padding:10px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; }
+    section { padding:20px; }
+    .map { height:400px; margin-bottom:20px; border:2px solid #ccc; }
+    footer { background:#06402B; color:white; text-align:center; padding:10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo file must be in same folder or in /images -->
+    <img src="atlas_logo.png" alt="Atlas Research Logo"/>
+    <h1>Atlas Research Hub</h1>
+    <p>Climate Change • GIS • Natural Resources</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#maps">Maps & Data</a>
+    <a href="#publications">Publications</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome</h2>
+    <p>Atlas Research Hub showcases geospatial analysis and climate vulnerability studies across Tanzania and beyond.</p>
+  </section>
+
+  <section id="maps">
+    <h2>Interactive Maps</h2>
+    <h3>Temperature – Kilimanjaro</h3>
+    <div id="map1" class="map"></div>
+
+    <h3>Rainfall – Rufiji Delta</h3>
+    <div id="map2" class="map"></div>
+
+    <h3>Drought – Singida</h3>
+    <div id="map3" class="map"></div>
+
+    <h3>Flood – Dar es Salaam</h3>
+    <div id="map4" class="map"></div>
+
+    <h3>Land Use & Land Cover Change – Zanzibar</h3>
+    <div id="map5" class="map"></div>
+
+    <h3>Climate Projections – Serengeti</h3>
+    <div id="map6" class="map"></div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Research proposals, reports, and academic papers with APA citations.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Atlas Research is led by Nelson Alex, MSc candidate in Natural Resources Assessment & Management, specializing in GIS, climate vulnerability, and geospatial analytics.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: info@atlasresearch.co.tz | Phone: +255-XXX-XXX-XXX</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Atlas Research</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Example Leaflet maps (replace with GEE tile URLs)
+    var map1 = L.map('map1').setView([-3.1, 37.4], 8); // Kilimanjaro
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map1);
+
+    var map2 = L.map('map2').setView([-7.8, 39.0], 8); // Rufiji
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+
+    var map3 = L.map('map3').setView([-4.8, 34.7], 8); // Singida
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map3);
+
+    var map4 = L.map('map4').setView([-6.8, 39.2], 10); // Dar es Salaam
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map4);
+
+    var map5 = L.map('map5').setView([-6.2, 39.3], 9); // Zanzibar
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map5);
+
+    var map6 = L.map('map6').setView([-2.3, 34.8], 9); // Serengeti
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map6);
+  </script>
+</body>
+</html>
